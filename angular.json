@@ -127,6 +127,7 @@
   },
   "defaultProject": "http-effects",
   "cli": {
-    "analytics": false
+    "defaultCollection": "@ngrx/schematics",
+    "analytics": "a4d98b8f-0ed8-49d1-b795-543c562a0b79"
   }
 }

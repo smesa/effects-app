@@ -1,1 +1,32 @@
-<p>usuario works!</p>
+<div class="alert alert-info text-center" role="alert" *ngIf="loading">
+  <h4 class="alert-heading">Cargando</h4>
+  <p>
+    <i class="fa fa-sync fa-spin fa-2x"></i>
+  </p>
+</div>
+
+
+<div class="alert alert-danger text-center" role="alert" *ngIf="error && !loading">
+  <h4 class="alert-heading">Error</h4>
+  <pre>
+    {{error | json}}
+  </pre>
+</div>
+
+<div class="row" *ngIf="!loading">
+  <div class="col-4">
+    <img [src]="usuario.avatar" [alt]="usuario.first_name" class="img-thumbnail">
+  </div>
+  <div class="col">
+    <div class="list-group">
+      <div class="list-group-item">
+        <li>
+          <strong>Nombre:</strong> {{usuario.first_name}}
+        </li>
+        <li>
+          <strong>Apellido:</strong> {{usuario.last_name}}
+        </li>
+      </div>
+    </div>
+  </div>
+</div>
